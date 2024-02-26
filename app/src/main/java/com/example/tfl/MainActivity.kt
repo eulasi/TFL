@@ -78,7 +78,7 @@ fun TubeStatusItem(tflItem: TflItem) {
                 textAlign = TextAlign.Left,
                 fontFamily = FontFamily.SansSerif,
                 color = Color.Gray,
-                style = TextStyle(fontSize = 28.sp),
+                style = TextStyle(fontSize = 22.sp),
                 modifier = Modifier
                     .padding(22.dp)
             )
@@ -92,7 +92,7 @@ fun TubeStatusItem(tflItem: TflItem) {
                             text = "${it.statusSeverityDescription} ${it.reason ?: "No reason provided"}",
                             textAlign = TextAlign.Left,
                             fontFamily = FontFamily.SansSerif,
-                            style = TextStyle(fontSize = 28.sp),
+                            style = TextStyle(fontSize = 22.sp),
                             modifier = Modifier
                                 .padding(start = 52.dp, top = 22.dp, bottom = 22.dp, end = 22.dp)
                         )
