@@ -18,10 +18,6 @@ class TubeStatusViewModel @Inject constructor(
     val tubeStatus = MutableLiveData<List<TflItem>>()
     val errorMessage = MutableLiveData<String>()
 
-    init {
-        fetchTubeStatus()
-    }
-
     private fun fetchTubeStatus() {
         viewModelScope.launch {
             try {
@@ -39,5 +35,10 @@ class TubeStatusViewModel @Inject constructor(
             }
         }
     }
+
+    init {
+        fetchTubeStatus()
+    }
+
 }
 
