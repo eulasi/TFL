@@ -1,9 +1,9 @@
-package com.example.tfl.remote
+package com.example.tfl.data.remote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitInstance {
+object TflApiDetails {
     private const val BASE_URL = "https://api.tfl.gov.uk/"
 
     private val retrofit by lazy {

@@ -1,7 +1,7 @@
-package com.example.tfl.module
+package com.example.tfl.dependencyinj
 
-import com.example.tfl.remote.RetrofitInstance
-import com.example.tfl.remote.TflApiService
+import com.example.tfl.data.remote.TflApiDetails
+import com.example.tfl.data.remote.TflApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,6 +14,6 @@ object AppModule {
     @Singleton
     @Provides
     fun provideTflApiService(): TflApiService {
-        return RetrofitInstance.api
+        return TflApiDetails.api
     }
 }

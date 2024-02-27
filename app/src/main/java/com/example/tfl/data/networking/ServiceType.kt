@@ -1,4 +1,4 @@
-package com.example.tfl.data.json
+package com.example.tfl.data.networking
 
 
 import com.google.gson.annotations.SerializedName

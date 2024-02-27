@@ -1,6 +1,6 @@
-package com.example.tfl.remote
+package com.example.tfl.data.remote
 
-import com.example.tfl.data.json.TflItem
+import com.example.tfl.data.networking.TflItem
 import retrofit2.Response
 import retrofit2.http.GET
 
