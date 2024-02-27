@@ -15,7 +15,8 @@ class TubeStatusViewModel @Inject constructor(
     private val repository: TubeStatusRepository
 ) : ViewModel() {
 
-    val tubeStatus = MutableLiveData<List<TflItem>>(emptyList())
+    val tubeStatus = MutableLiveData<List<TflItem>>()
+    val errorMessage = MutableLiveData<String>()
 
     init {
         fetchTubeStatus()
@@ -23,12 +24,18 @@ class TubeStatusViewModel @Inject constructor(
 
     private fun fetchTubeStatus() {
         viewModelScope.launch {
-            val response = repository.getTubeStatus()
-            if (response.isSuccessful) {
-                tubeStatus.value = response.body()
-                Log.d("TubeStatusViewModel", "Data fetched: ${tubeStatus.value}")
-            } else {
-                Log.e("TubeStatusViewModel", "Error fetching data: ${response.errorBody()}")
+            try {
+                val response = repository.getTubeStatus()
+                if (response.isSuccessful) {
+                    tubeStatus.value = response.body()
+                    Log.d("TubeStatusViewModel", "Data fetched: ${tubeStatus.value}")
+                } else {
+                    errorMessage.value = "Error fetching data: ${response.errorBody()}"
+                    Log.e("TubeStatusViewModel", errorMessage.value!!)
+                }
+            } catch (e: Exception) {
+                errorMessage.value = "Exception occurred: ${e.message}"
+                Log.e("TubeStatusViewModel", errorMessage.value!!)
             }
         }
     }

@@ -35,6 +35,7 @@ import com.example.tfl.data.networking.TflItem
 import com.example.tfl.utilities.generateRandomColor
 import com.example.tfl.viewmodel.TubeStatusViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.compose.runtime.livedata.observeAsState
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -48,7 +49,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TubeStatusScreen(tubeStatusViewModel: TubeStatusViewModel = viewModel()) {
-    val tubeStatus = tubeStatusViewModel.tubeStatus.value ?: emptyList()
+    val tubeStatus by tubeStatusViewModel.tubeStatus.observeAsState(initial = emptyList())
 
     LazyColumn {
         items(tubeStatus) { tflItem ->
