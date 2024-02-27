@@ -16,4 +16,5 @@ object TflApiDetails {
     val api: TflApiService by lazy {
         retrofit.create(TflApiService::class.java)
     }
+
 }
