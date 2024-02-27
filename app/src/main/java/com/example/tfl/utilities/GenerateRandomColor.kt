@@ -1,4 +1,4 @@
-package com.example.tfl.ui
+package com.example.tfl.utilities
 
 import androidx.compose.ui.graphics.Color
 import kotlin.random.Random

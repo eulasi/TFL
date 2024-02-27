@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.tfl.data.networking.TflItem
-import com.example.tfl.ui.generateRandomColor
+import com.example.tfl.utilities.generateRandomColor
 import com.example.tfl.viewmodel.TubeStatusViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
