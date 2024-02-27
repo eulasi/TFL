@@ -71,7 +71,7 @@ fun TubeStatusItem(tflItem: TflItem) {
             Box(
                 modifier = Modifier
                     .background(backgroundColor)
-                    .size(width = 20.dp, height = 80.dp)
+                    .size(width = 20.dp, height = 70.dp)
             )
             Spacer(modifier = Modifier.width(16.dp))
             Text(
@@ -79,7 +79,7 @@ fun TubeStatusItem(tflItem: TflItem) {
                 textAlign = TextAlign.Left,
                 fontFamily = FontFamily.SansSerif,
                 color = Color.Gray,
-                style = TextStyle(fontSize = 22.sp),
+                style = TextStyle(fontSize = 20.sp),
                 modifier = Modifier
                     .padding(22.dp)
             )
@@ -93,7 +93,7 @@ fun TubeStatusItem(tflItem: TflItem) {
                             text = "${it.statusSeverityDescription} ${it.reason ?: "No reason provided"}",
                             textAlign = TextAlign.Left,
                             fontFamily = FontFamily.SansSerif,
-                            style = TextStyle(fontSize = 22.sp),
+                            style = TextStyle(fontSize = 18.sp),
                             modifier = Modifier
                                 .padding(start = 52.dp, top = 22.dp, bottom = 22.dp, end = 22.dp)
                         )
