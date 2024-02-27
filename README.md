@@ -19,4 +19,4 @@
 9) **Observe the Data in the Main Activity**
    - In your `MainActivity`, observe the `LiveData` from the `ViewModel` from  the `UI`.
 10) **Run and Test**
-   - Run the app and `Test` it to ensure that it fetches and displays the data correctly.
+    - Run the app and `Test` it to ensure that it fetches and displays the data correctly.
