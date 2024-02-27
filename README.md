@@ -7,7 +7,7 @@
 3) **Create API Service**
    - Define an interface for your `Retrofit API` service with the necessary endpoints.
 4) **Set up Retrofit Details**
-   - Create a `Retrofit` instance and configure it with the base URL of the `API`, the `Gson` converter, and any other necessary settings.
+   - Create a `Retrofit` instance and configure it with the `base URL` of the `API`, the `Gson` converter, and any other necessary settings.
 5) **Prepare Hilt for Dependency Injection**
    - Set up `Hilt` by annotating your Application class with @HiltAndroidApp, creating a `Hilt` module with @Module and @InstallIn, and providing the necessary dependencies.
 6) **Create the Repository**
